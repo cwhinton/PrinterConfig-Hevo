@@ -28,5 +28,5 @@ volume:
   depth: 282.0
   formFactor: rectangular
   height: 300.0
-  origin: lowerleft
+  origin: center
   width: 297.0
