@@ -204,11 +204,11 @@ plugins:
       _important:
         read_until: 1521111600
       _octopi:
-        read_until: 1499253000
+        read_until: 1521023400
       _plugins:
-        read_until: 1519603200
+        read_until: 1520726400
       _releases:
-        read_until: 1513079100
+        read_until: 1521475200
   cura:
     cura_engine: /usr/bin/CuraEngine
   discovery:
