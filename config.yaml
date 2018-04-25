@@ -1,9 +1,10 @@
 accessControl:
-  salt: K6ibggH5fUWmT3TyCWMIkfQZUoLbOdAI
+  salt: LHGl7LaC22Ub3oIhFsFvtDZoF4WYng6Z
 api:
   key: 28FC79F04EEB4C9A806B2CC1D34745DF
 appearance:
-  name: HEVO - Kamikaze 2.1.1
+  name: Hevo - Kamikaze 2.1.1
+  showFahrenheitAlso: true
 controls:
 - children:
   - commands:
@@ -191,7 +192,8 @@ controls:
     name: Set
   layout: vertical
   name: Stepper steps pr mm and direction
-feature: {}
+feature:
+  printCancelConfirmation: false
 folder:
   uploads: /usr/share/models
 gcodeViewer: {}
@@ -204,20 +206,19 @@ plugins:
       _important:
         read_until: 1521111600
       _octopi:
-        read_until: 1521023400
+        read_until: 1524561300
       _plugins:
-        read_until: 1520726400
+        read_until: 1524182400
       _releases:
-        read_until: 1521475200
+        read_until: 1523631300
   cura:
     cura_engine: /usr/bin/CuraEngine
   discovery:
     upnpUuid: d0867588-42b7-481e-88a2-206e9316b3f6
-  simpleemergencystop:
-    emergencyGCODE: M81 R
   softwareupdate:
     _config_version: 6
     check_providers:
+      estop: estop
       filemanager: filemanager
       simpleemergencystop: simpleemergencystop
       slicer: slicer
@@ -274,8 +275,21 @@ system:
   - action: restart mjpg
     command: sudo systemctl restart mjpg.service
     name: Restart Mjpg
-temperature: {}
+temperature:
+  profiles:
+  - bed: 100
+    extruder: 210
+    name: ABS
+  - bed: '74'
+    extruder: 180
+    name: PLA
+  - bed: '94'
+    extruder: '245'
+    name: PETG
+  - bed: '60'
+    extruder: '130'
+    name: Probing
 webcam:
   ffmpeg: /usr/bin/avconv
-  snapshot: http://10.0.45.4:8080/?action=snapshot
-  stream: http://10.0.45.4:8080/?action=stream
+  snapshot: http://hevo.local:8080/?action=snapshot
+  stream: http://hevo.local:8080/?action=stream
