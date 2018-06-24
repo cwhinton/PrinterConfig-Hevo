@@ -3,7 +3,7 @@ accessControl:
 api:
   key: 28FC79F04EEB4C9A806B2CC1D34745DF
 appearance:
-  name: Hevo - Kamikaze 2.1.1
+  name: HEVO - Umikaze2.1.2-rc7
   showFahrenheitAlso: true
 controls:
 - children:
@@ -197,20 +197,20 @@ feature:
 folder:
   timelapse: /mnt/usbkey/octoprint/timelapse
   timelapse_tmp: /mnt/usbkey/octoprint/timelapse/tmp
-  uploads: /usr/share/models
+  uploads: /mnt/usbkey/octoprint/models
 gcodeViewer: {}
 plugins:
   announcements:
     _config_version: 1
     channels:
       _blog:
-        read_until: 1522320900
+        read_until: 1525943700
       _important:
         read_until: 1521111600
       _octopi:
-        read_until: 1525252500
+        read_until: 1527588900
       _plugins:
-        read_until: 1524441600
+        read_until: 1525910400
       _releases:
         read_until: 1523631300
   cura:
@@ -251,7 +251,6 @@ serial:
   additionalPorts:
   - /dev/octoprint_1
   baudrate: 115200
-  port: /dev/octoprint_1
   timeout: {}
 server:
   commands:
@@ -266,6 +265,7 @@ server:
   secretKey: RnUkld1QNaBoe6KGSGcA1sMSSMgGmdRd
   seenWizards:
     corewizard: 3
+    cura: null
 system:
   actions:
   - action: restart_redeem
@@ -293,5 +293,11 @@ temperature:
     name: Probing
 webcam:
   ffmpeg: /usr/bin/avconv
-  snapshot: http://hevo.local:8080/?action=snapshot
-  stream: http://hevo.local:8080/?action=stream
+  snapshot: http://hevo:8080/?action=snapshot
+  stream: http://hevo:8080/?action=stream
+  timelapse:
+    fps: 25
+    options:
+      interval: 10
+    postRoll: 0
+    type: timed
