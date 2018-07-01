@@ -293,11 +293,12 @@ temperature:
     name: Probing
 webcam:
   ffmpeg: /usr/bin/avconv
-  snapshot: http://hevo:8080/?action=snapshot
-  stream: http://hevo:8080/?action=stream
+  snapshot: http://10.0.47.50:8080/?action=snapshot
+  stream: http://10.0.47.50:8080/?action=stream
   timelapse:
     fps: 25
     options:
-      interval: 10
+      minDelay: 5.0
+      retractionZHop: 1.0
     postRoll: 0
-    type: timed
+    type: zchange
