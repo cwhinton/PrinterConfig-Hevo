@@ -210,7 +210,7 @@ plugins:
       _octopi:
         read_until: 1527588900
       _plugins:
-        read_until: 1529280000
+        read_until: 1530748800
       _releases:
         read_until: 1529502000
   cura:
