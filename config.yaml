@@ -1,9 +1,10 @@
 accessControl:
-  salt: K6ibggH5fUWmT3TyCWMIkfQZUoLbOdAI
+  salt: LHGl7LaC22Ub3oIhFsFvtDZoF4WYng6Z
 api:
   key: 28FC79F04EEB4C9A806B2CC1D34745DF
 appearance:
-  name: HEVO - Kamikaze 2.1.1
+  name: HEVO - Umikaze2.1.2-rc7
+  showFahrenheitAlso: true
 controls:
 - children:
   - commands:
@@ -191,33 +192,35 @@ controls:
     name: Set
   layout: vertical
   name: Stepper steps pr mm and direction
-feature: {}
+feature:
+  printCancelConfirmation: false
 folder:
-  uploads: /usr/share/models
+  timelapse: /mnt/usbkey/octoprint/timelapse
+  timelapse_tmp: /mnt/usbkey/octoprint/timelapse/tmp
+  uploads: /mnt/usbkey/octoprint/models
 gcodeViewer: {}
 plugins:
   announcements:
     _config_version: 1
     channels:
       _blog:
-        read_until: 1522320900
+        read_until: 1529054100
       _important:
         read_until: 1521111600
       _octopi:
-        read_until: 1521023400
+        read_until: 1527588900
       _plugins:
-        read_until: 1520726400
+        read_until: 1530748800
       _releases:
-        read_until: 1521475200
+        read_until: 1529502000
   cura:
     cura_engine: /usr/bin/CuraEngine
   discovery:
     upnpUuid: d0867588-42b7-481e-88a2-206e9316b3f6
-  simpleemergencystop:
-    emergencyGCODE: M81 R
   softwareupdate:
     _config_version: 6
     check_providers:
+      estop: estop
       filemanager: filemanager
       simpleemergencystop: simpleemergencystop
       slicer: slicer
@@ -248,7 +251,6 @@ serial:
   additionalPorts:
   - /dev/octoprint_1
   baudrate: 115200
-  port: /dev/octoprint_1
   timeout: {}
 server:
   commands:
@@ -263,6 +265,7 @@ server:
   secretKey: RnUkld1QNaBoe6KGSGcA1sMSSMgGmdRd
   seenWizards:
     corewizard: 3
+    cura: null
 system:
   actions:
   - action: restart_redeem
@@ -274,8 +277,28 @@ system:
   - action: restart mjpg
     command: sudo systemctl restart mjpg.service
     name: Restart Mjpg
-temperature: {}
+temperature:
+  profiles:
+  - bed: 100
+    extruder: 210
+    name: ABS
+  - bed: '74'
+    extruder: 180
+    name: PLA
+  - bed: '94'
+    extruder: '245'
+    name: PETG
+  - bed: '60'
+    extruder: '130'
+    name: Probing
 webcam:
   ffmpeg: /usr/bin/avconv
-  snapshot: http://10.0.45.4:8080/?action=snapshot
-  stream: http://10.0.45.4:8080/?action=stream
+  snapshot: http://10.0.47.50:8080/?action=snapshot
+  stream: http://10.0.47.50:8080/?action=stream
+  timelapse:
+    fps: 25
+    options:
+      minDelay: 5.0
+      retractionZHop: 1.0
+    postRoll: 0
+    type: zchange
