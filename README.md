@@ -15,3 +15,5 @@ The printer is a Hypercube Evolution (CoreXY) based on the 300x300x300 settings 
 workbook.  My print area is somewhat smaller than that.  It currently homes to the back right
 with the print bed lowered to the bottom.
 
+## Capturing the changes
+See the documentation at https://github.com/cwhinton/PrinterScripts
