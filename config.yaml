@@ -212,7 +212,7 @@ plugins:
       _plugins:
         read_until: 1530748800
       _releases:
-        read_until: 1529502000
+        read_until: 1530878400
   cura:
     cura_engine: /usr/bin/CuraEngine
   discovery:
@@ -298,7 +298,6 @@ webcam:
   timelapse:
     fps: 25
     options:
-      minDelay: 5.0
-      retractionZHop: 1.0
+      interval: 10
     postRoll: 0
-    type: zchange
+    type: timed
