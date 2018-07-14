@@ -210,7 +210,7 @@ plugins:
       _octopi:
         read_until: 1527588900
       _plugins:
-        read_until: 1530748800
+        read_until: 1531353600
       _releases:
         read_until: 1530878400
   cura:
@@ -282,13 +282,13 @@ temperature:
   - bed: 100
     extruder: 210
     name: ABS
-  - bed: '74'
+  - bed: '69'
     extruder: 180
     name: PLA
   - bed: '94'
     extruder: '245'
     name: PETG
-  - bed: '60'
+  - bed: '69'
     extruder: '130'
     name: Probing
 webcam:
