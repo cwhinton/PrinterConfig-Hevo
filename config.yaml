@@ -295,9 +295,3 @@ webcam:
   ffmpeg: /usr/bin/avconv
   snapshot: http://10.0.47.50:8080/?action=snapshot
   stream: http://10.0.47.50:8080/?action=stream
-  timelapse:
-    fps: 25
-    options:
-      interval: 10
-    postRoll: 0
-    type: timed
